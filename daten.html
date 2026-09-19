@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-37CLNTBSNG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-37CLNTBSNG');
+    </script>
+
+    <title>Daten & Auswertung der Schweizer Studie – Datensatzstruktur & Regression</title>
+
+    <meta name="description" content="Struktur des geplanten Datensatzes, zentrale Variablen und die statistischen Auswertungsschritte der Schweizer Studie – inklusive Varianzaufklärung.">
+
+    <link rel="canonical" href="https://studienkonzept.kuhlmei.ch/daten.html">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Strukturierte Daten (Schema.org) -->
+    <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebPage",
+      "@id": "https://studienkonzept.kuhlmei.ch/daten.html#webpage",
+      "name": "Daten & Auswertung der Schweizer Studie",
+      "url": "https://studienkonzept.kuhlmei.ch/daten.html",
+      "description": "Struktur des geplanten Datensatzes, zentrale Variablen und die statistischen Auswertungsschritte der Schweizer Studie – inklusive Varianzaufklärung.",
+      "inLanguage": "de"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://studienkonzept.kuhlmei.ch/daten.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://studienkonzept.kuhlmei.ch/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Daten & Auswertung",
+          "item": "https://studienkonzept.kuhlmei.ch/daten.html"
+        }
+      ]
+    },
+
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://studienkonzept.kuhlmei.ch/daten.html#article",
+      "headline": "Daten & Auswertung der Schweizer Studie",
+      "url": "https://studienkonzept.kuhlmei.ch/daten.html",
+      "inLanguage": "de",
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Eckehard Kuhlmei"
+      },
+      "about": [
+        "Kriminalität (KRI)",
+        "Kulturspezifische Prägungen (KP)",
+        "Sozioökonomische Variablen (AL, AR, BI, GE, SS)",
+        "Regressionsanalyse",
+        "Varianzaufklärung",
+        "Hypothetische Datensätze"
+      ],
+      "keywords": [
+        "Datensatzstruktur",
+        "Regression",
+        "Varianzaufklärung",
+        "Schweizer Studie",
+        "Statistische Hypothesen",
+        "R-Auswertung"
+      ]
+    },
+
+    {
+      "@type": "Dataset",
+      "@id": "https://studienkonzept.kuhlmei.ch/daten.html#dataset",
+      "name": "Hypothetischer Datensatz der Schweizer Studie",
+      "description": "Struktur und Variablen eines hypothetischen Datensatzes zur Analyse von Kriminalität, kulturspezifischen Prägungen und sozioökonomischen Merkmalen.",
+      "url": "https://studienkonzept.kuhlmei.ch/daten.html",
+      "creator": {
+        "@type": "Person",
+        "name": "Dr. Eckehard Kuhlmei"
+      },
+      "inLanguage": "de",
+      "isAccessibleForFree": true,
+      "variableMeasured": [
+        {
+          "@type": "PropertyValue",
+          "name": "KRI",
+          "description": "Kriminalität"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "KP",
+          "description": "Kulturspezifische Prägungen"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "AL",
+          "description": "Alter"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "AR",
+          "description": "Armut"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "BI",
+          "description": "Bildung"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GE",
+          "description": "Geschlecht"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "SS",
+          "description": "Sozialer Status"
+        }
+      ]
+    }
+
+  ]
+}
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Navigation – identisch zur Fragebogenseite -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="stichprobe.html">Stichprobe</a></li>
+            <li><a href="fragebogen.html">Fragebogen & Variablen</a></li>
+            <li><a href="daten.html" class="active">Daten & Auswertung</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="https://urban.kuhlmei.ch" class="nav-link-main">Hauptseite</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <div class="page-wrapper">
+
+        <h1> Datentabelle und Auswertung </h1>
+
+<p> Diese Seite beschreibt die Struktur des geplanten Datensatzes und die vorgesehenen statistischen Auswertungen des Studienkonzepts. </p>
+
+<p> Sie stellt die zentralen Variablen vor, darunter das Kriterium Kriminalität KRI, die kulturspezifischen Prägungen KP sowie die sozioökonomischen Merkmale Alter AL, Armut AR, Bildung BI, Geschlecht GE und sozialer Status SS. Außerdem wird eine hypothetische Datentabelle gezeigt, die verdeutlicht, wie ein vollständiger Datensatz für die geplanten Analysen aussehen würde. </p>
+
+<p> Wichtig ist: Im Rahmen dieses Studienkonzepts wurden keine Daten erhoben. Alle dargestellten Werte, Tabellen und Analyseschritte dienen ausschließlich der methodischen Illustration und zeigen, wie die statistischen Hypothesen mit realen Daten geprüft würden. </p>
+
+<p> Im Anschluss werden die beiden statistischen Hypothesen sinngemäß nach Urbaniok erläutert und die dazugehörigen Auswertungsschritte in R beschrieben, die bei Vorliegen eines Datensatzes zur Prüfung der jeweiligen Varianzaufklärung herangezogen würden.</p>
+
+<p> Zunächst folgt eine Übersicht der im Studienkonzept vorgesehenen Variablen. </p>
+
+<h2> 1. Variablen </h2>
+
+<h3> 1.1 Kriterium </h3>
+
+<p> KRI = Kriminalität</p>
+
+<p>Die folgenden Variablen werden im Rahmen
+der statistischen Modelle als Prädiktoren des Kriteriums KRI eingesetzt.</p>
+
+<h3> 1.2 Kulturspezifische Prägungen </h3>
+
+<p> KP = Kulturspezifische Prägungen</p>
+
+<h3> 1.3 Sozioökonomische Variablen </h3>
+
+<p> AL = Alter</p>
+<p> AR = Armut</p>
+<p> BI = Bildung</p>
+<p> GE = Geschlecht</p>
+<p> SS = Sozialer Status</p>
+
+
+<h2> 2. Datentabelle </h2>
+
+<p> Die Datentabelle umfasst ausschließlich die für die Analyse relevanten zentralen Variablen. </p>
+
+
+<table class="table-wide-first-column">
+    <thead>
+        <tr>
+            <th>Person</th>
+            <th>KRI</th>
+            <th>KP</th>
+            <th>AL</th>
+            <th>AR</th>
+            <th>BI</th>
+            <th>GE</th>
+            <th>SS</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>kri<sub>1</sub></td>
+            <td>kp<sub>1</sub></td>
+            <td>al<sub>1</sub></td>
+            <td>ar<sub>1</sub></td>
+            <td>bi<sub>1</sub></td>
+            <td>ge<sub>1</sub></td>
+            <td>ss<sub>1</sub></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>kri<sub>2</sub></td>
+            <td>kp<sub>2</sub></td>
+            <td>al<sub>2</sub></td>
+            <td>ar<sub>2</sub></td>
+            <td>bi<sub>2</sub></td>
+            <td>ge<sub>2</sub></td>
+            <td>ss<sub>2</sub></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>kri<sub>3</sub></td>
+            <td>kp<sub>3</sub></td>
+            <td>al<sub>3</sub></td>
+            <td>ar<sub>3</sub></td>
+            <td>bi<sub>3</sub></td>
+            <td>ge<sub>3</sub></td>
+            <td>ss<sub>3</sub></td>
+        </tr>
+
+        <tr>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+            <td>…</td>
+        </tr>
+
+        <tr>
+            <td>n = 20&nbsp;000</td>
+            <td>kri<sub>n</sub></td>
+            <td>kp<sub>n</sub></td>
+            <td>al<sub>n</sub></td>
+            <td>ar<sub>n</sub></td>
+            <td>bi<sub>n</sub></td>
+            <td>ge<sub>n</sub></td>
+            <td>ss<sub>n</sub></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p> Der Wert kri<sub>1</sub> ist der Messwert der ersten Person auf der Variable Kriminalität und ss<sub>n</sub> ist der Messwert der 20&nbsp;000sten Person auf der Variable sozialer Status.</p>
+
+<h2> 3. Statistische Hypothesen – Auswertung mit R </h2>
+
+<p> Pop bezeichnet die Population, also jene Grundgesamtheit, auf die sich die theoretischen Aussagen der Hypothesen beziehen.</p>
+
+<p> Da es sich um ein theoretisches Beispiel ohne reale Daten handelt, beziehen sich alle genannten Werte auf jene Resultate, die im Ausdruck der jeweiligen R-Objekte erscheinen würden.</p>
+
+<p>Im gesamten Text sind sämtliche R‑Befehle kursiv formatiert, um sie klar von der Beschreibung der Analyseschritte abzugrenzen.
+Hinweis: Der R-Befehl <em>lm</em> steht für <em>lineares Modell</em> und dient der Schätzung linearer Modelle im Rahmen der Regressionsanalyse.</p>
+
+<h2> 3.1 Statistische Hypothese 1 </h2> 
+
+KP sollte über die anderen Prädiktoren AL, AR, BI, GE und SS hinaus in der Population einen eigenen Varianzanteil von KRI aufklären: <br>
+
+R<sub>Pop</sub><sup>2</sup>(KRI . KP, AL, AR, BI, GE, SS) 
+−
+R<sub>Pop</sub><sup>2</sup>(KRI . AL, AR, BI, GE, SS) > 0
+
+<h4> Auswertung mit dem Statistikprogramm R </h4>
+
+<h5> Schritt 1</h5>
+
+<p> Im ersten Schritt der multiplen Regressionsanalyse werden die Prädiktoren des bekannten Erklärungsmodells AL, AR, BI, GE, SS zur Vorhersage des Kriteriums KRI verwendet.</p>
+
+<p> <em>lm1 = lm(KRI ~ AL+AR+BI+GE+SS)</em></p>
+
+<p> <em>ergebnisse_1 = summary(lm1)</em> </p>
+
+<p> Das liefert uns die theoretische Varianzaufklärung R<sup>2</sup> (KRI . AL, AR, BI, GE, SS) in der untersuchten Stichprobe; der entsprechende Wert würde im Ausdruck von ergebnisse_1 erscheinen. </p>
+
+<h5> Schritt 2: Zuwachs und Effektgröße f<sup>2</sup> </h5>
+
+<p> Im zweiten Schritt der multiplen Regressionsanalyse werden die Prädiktoren des bekannten Erklärungsmodells AL, AR, BI, GE, SS und KP zur Vorhersage des Kriteriums KRI verwendet. </p>
+
+<p> <em>lm2 = lm(KRI ~ KP+AL+AR+BI+GE+SS)</em> </p>
+
+<p> <em>ergebnisse_2 = summary(lm2)</em> </p>
+
+<p> Das würde die theoretische Varianzaufklärung R<sup>2</sup> (KRI . KP, AL, AR, BI, GE, SS) in der untersuchten Stichprobe liefern; der entsprechende Wert würde im Ausdruck von ergebnisse_2 erscheinen.</p>
+
+<p> Jetzt können wir deskriptiv beurteilen, ob KP einen zusätzlichen Varianzanteil des Kriteriums über AL, AR, BI, GE und SS  in der Stichprobe aufklärt und wie groß dieser Zuwachs ist: </p>
+
+<p> R<sup>2</sup> (KRI . KP, AL, AR, BI, GE, SS) - R<sup>2</sup> (KRI . AL, AR, BI, GE, SS) </p>
+
+<p>Die Effektgröße berechnet sich nach der folgenden Formel:</p>
+
+<p>f<sup>2</sup> = R<sup>2</sup>((KRI . KP, AL, AR, BI, GE, SS) - R<sup>2</sup>(KRI . AL, AR, BI, GE, SS)) / (1 - R<sup>2</sup>((KRI . KP, AL, AR, BI, GE, SS)))</p>
+
+<p>Nach der Konvention von Cohen (1988, S. 410 – 414) ist ein f<sup>2</sup> von 0.02 klein, von 0.15 mittel und von 0.35 groß.</p>
+
+<h5> Schritt 3: Signifikanztest F</h5>
+
+<p> <em>ergebnisse_3 = anova(lm1, lm2)</em> </p>
+
+<p> Im Ausdruck von ergebnisse_3 würden wir den für den Signifikanztest relevanten F-Wert sowie die zugehörige Irrtumswahrscheinlichkeit p erhalten. Im Standardfall gilt: Wenn p < 0.05 wäre, würde die Nullhypothese verworfen und unsere statistische Hypothese 1 wäre damit gestützt.</p>
+
+<h2> 3.2 Statistische Hypothese 2 </h2>
+
+<p> AL, AR, BI, GE und SS sollten über den Prädiktor KP hinaus in der Population (Pop) keinen eigenen Varianzanteil von KRI aufklären: </p>
+
+<p> R<sub>Pop</sub><sup>2</sup> (KRI . KP, AL, AR, BI, GE, SS) − R<sub>Pop</sub><sup>2</sup> (KRI . KP) = 0</p>
+
+<p> Hinweis: Die statistische Hypothese 2 ist eine Nullhypothese. </p>
+
+<h4> Auswertung mit R </h4>
+
+<h5> Schritt 1</h5>
+
+<p> Im ersten Schritt der multiplen Regressionsanalyse wird der Prädiktor KP zur Vorhersage des Kriteriums KRI verwendet. </p>
+
+<p> <em>lm3 = lm(KRI ~ KP)</em> </p>
+
+<p> <em>ergebnisse_4 = summary(lm3)</em> </p>
+
+<p> Das würde die theoretische Varianzaufklärung R<sup>2</sup> (KRI . KP) in der untersuchten Stichprobe liefern; der entsprechende Wert würde im Ausdruck von ergebnisse_4 erscheinen.</p>
+
+<h5> Schritt 2: Zuwachs und Effektgröße f<sup>2</sup> </h5>
+
+<p> Im zweiten Schritt der multiplen Regressionsanalyse werden die Prädiktoren des bekannten Erklärungsmodells AL, AR, BI, GE, SS und KP zur Vorhersage des Kriteriums KRI verwendet. </p>
+
+<p> <em>lm2 = lm(KRI ~ KP+AL+AR+BI+GE+SS)</em> </p>
+
+<p> <em>ergebnisse_2 = summary(lm2)</em> </p>
+
+<p> Das würde die theoretische Varianzaufklärung R<sup>2</sup> (KRI . KP, AL, AR, BI, GE, SS) in der untersuchten Stichprobe liefern; der entsprechende Wert würde im Ausdruck von ergebnisse_2 erscheinen.</p>
+
+<p> Jetzt können wir bereits deskriptiv beurteilen, ob AL, AR, BI, GE und SS  einen zusätzlichen Varianzanteil des Kriteriums über KP in der Stichprobe aufklären und wie groß dieser Zuwachs ist: </p>
+
+<p> R<sup>2</sup> (KRI . KP, AL, AR, BI, GE, SS) - R<sup>2</sup> (KRI . KP)</p>
+
+<p>Die Effektgröße berechnet sich nach der folgenden Formel:</p>
+
+<p>f<sup>2</sup> = R<sup>2</sup>((KRI . KP, AL, AR, BI, GE, SS) - R<sup>2</sup>(KRI . KP)) / (1 - R<sup>2</sup>((KRI . KP, AL, AR, BI, GE, SS)))</p>
+
+<p>Nach der Konvention von Cohen (1988, S. 410 – 414) ist ein f<sup>2</sup> von 0.02 klein, von 0.15 mittel und von 0.35 groß.</p>
+
+<h5> Schritt 3: Signifikanztest F </h5>
+
+<p> <em>ergebnisse_5 = anova(lm3, lm2)</em> </p>
+
+<p> Im Ausdruck von ergebnisse_5 würden wir den für den Signifikanztest relevanten F-Wert und die zugehörige Irrtumswahrscheinlichkeit p erhalten.  Im Standardfall: Wenn p < 0.05 wäre, würde die statistische Hypothese 2 verworfen. </p>
+
+<p> Hinweis: Bei strengerer Prüfung würde bereits bei p < 0.20 die Nullhypothese (statistische Hypothese 2) verworfen werden. </p>
+
+<h2> 4. Literatur </h2>
+<p> Cohen, J. (1988). <em>Statistical power analysis for the behavioral sciences</em> (2nd ed.). Hillsdale, NJ: Lawrence Erlbaum. </p>
+<p><a href="https://doi.org/10.4324/9780203771587">https://doi.org/10.4324/9780203771587</a></p>
+
+<!-- Zentrierter Link zurück -->
+<div style="text-align:center; margin-top:40px;">
+    <a href="https://urban.kuhlmei.ch/kausalitätsnachweis.html" class="back-link" style="color:#a3d4ff;">
+        Zurück zur Hauptseite
+    </a>
+</div>
+
+
+    </div>
+
+</div>
+<p style="margin-top:40px;">
+            <a href="#" class="back-to-top">Nach oben</a>
+        </p>
+
+</body>
+</html>

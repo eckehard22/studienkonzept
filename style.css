@@ -1,0 +1,203 @@
+/* ---------------------------------------------------------
+   GLOBAL
+--------------------------------------------------------- */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("hintergkn.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* ---------------------------------------------------------
+   NAVIGATION – Marmor-Dunkelgrau, glänzend, zentriert
+--------------------------------------------------------- */
+
+.main-nav {
+    background: linear-gradient(135deg, #2f2f2f, #4a4a4a);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+
+    border-bottom: 3px solid transparent;   /* Basislinie unsichtbar */
+}
+
+/* Hover-Effekt */
+.main-nav a:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* ---------------------------------------------------------
+   AKTIVER NAVIGATIONSPUNKT – Unterstrichen
+--------------------------------------------------------- */
+
+.main-nav a.active {
+    border-bottom: 3px solid #ffffff;       /* klare Unterstreichung */
+    text-underline-offset: 4px;
+}
+
+/* ---------------------------------------------------------
+   PAGE WRAPPER – Cremeweiß, Opazität 0.9, schmal
+--------------------------------------------------------- */
+
+.page-wrapper {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: rgba(255, 248, 230, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    border-radius: 4px;
+}
+
+/* ---------------------------------------------------------
+   TEXT & BILDER
+--------------------------------------------------------- */
+
+.page-wrapper img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE DESIGN – unter 600px Navigation vertikal
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .main-nav ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-nav a {
+        border-top: 1px solid rgba(255,255,255,0.2);
+        text-align: center;
+    }
+
+    .page-wrapper {
+        max-width: 90%;
+        margin: 15px auto;
+        padding: 18px;
+    }
+}
+
+/* ---------------------------------------------------------
+   BACK TO TOP BUTTON
+--------------------------------------------------------- */
+
+.back-to-top {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    background-color: #3399ff;
+}
+
+/* ---------------------------------------------------------
+   SUPERSMALL
+--------------------------------------------------------- */
+
+.supersmall {
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+/* ---------------------------------------------------------
+   BACK TO TOP BUTTON – rechts unten fixiert
+--------------------------------------------------------- */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2f2f2f;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background-color: #3399ff;
+}
+
+.indent-o {
+    margin-left: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   LISTEN-EINZÜGE
+--------------------------------------------------------- */
+
+/* Einzug für Absätze mit schwarzem Punkt (•) */
+.indent-dot {
+    margin-left: 12px;
+}
+
+/* Stärkerer Einzug für Absätze mit o */
+.indent-o {
+    margin-left: 26px;
+}
+
+/* Hauptseite-Link hellblau */
+.nav-link-main {
+    color: #a3d4ff !important;
+}
+
+.table-wide-first-column td:first-child,
+.table-wide-first-column th:first-child {
+    text-align: left !important;
+    padding-right: 30px; /* größerer Abstand zur zweiten Spalte */
+}
+
+/* Schwarze Umrandung für die gesamte Tabelle */
+.table-wide-first-column {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+/* Schwarze Linien für alle Zellen */
+.table-wide-first-column th,
+.table-wide-first-column td {
+    border: 1px solid black;
+}
+
+/* Erste Spalte linksbündig + größerer Abstand */
+.table-wide-first-column th:first-child,
+.table-wide-first-column td:first-child {
+    text-align: left !important;
+    padding-right: 30px;
+}
